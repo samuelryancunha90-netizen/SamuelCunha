@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SC Dev — Apresentação</title>
+  <meta name="description" content="SC Dev — Criação de sites, design e desenvolvimento web por Samuel Cunha." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="brand">
+  <img src="Imagem/Black Modern Abstract Logo.png" alt="Logo SC Dev" class="logo" style="width:56px;height:56px;border-radius:12px;object-fit:contain;">
+  <div>
+    <h1>SC Dev</h1>
+    <p>Samuel Cunha — Desenvolvimento Web</p>
+  </div>
+</div>
+      </div>
+      <nav>
+        <a href="#portfolio">Portfólio</a>
+        <a href="contato.html">Contato</a>
+
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <span class="kicker">Empresa • Solo</span>
+          <h2>Sobre Nós</h2>
+          <p class="lead">A SC Dev Studio é uma agência especializada em criação de sites, desenvolvimentos de sistemas e soluções digitais personalizadas. Focada em qualidade, performance e inovação.</p>
+          <div class="actions">
+            <a class="btn-primary" href="orcamento.html">Pedir orçamento</a>
+
+            
+
+          </div>
+
+<section id="galeria" style="margin-top:40px">
+  <h3 style="color:white;font-size:24px;margin-bottom:14px">Meus Trabalhos</h3>
+
+  <div class="galeria-grid">
+    <img src="Imagem/Foto Site Topografia.png" alt="Projeto 1">
+    <img src="Imagem/Foto Site SC Dev.png" alt="Projeto 2">
+    <img src="Imagem/Foto Site Topografia.png" alt="Projeto 3">
+    <img src="Imagem/Foto Site Topografia.png" alt="Projeto 4">
+  </div>
+</section>
+
+          <div class="features">
+            <div class="feature">
+              <h4>Performance</h4>
+              <p>Carregamento rápido e otimizações reais para SEO.</p>
+            </div>
+            <div class="feature">
+              <h4>Design</h4>
+              <p>Layouts modernos, Semi prontos.</p>
+            </div>
+            <div class="feature">
+              <h4>Suporte</h4>
+              <p>Manutenção e atualizações com SLA claro.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card">
+          <h3>Peça uma proposta</h3>
+          <p class="muted">Envie um resumo do projeto e eu retorno com prazo e orçamento.</p>
+          <form id="form2" onsubmit="return submit2(event)">
+            <input id="n2" placeholder="Nome completo*" required />
+            <input id="e2" type="email" placeholder="Email*" required />
+            <input id="p2" placeholder="Telefone" />
+            <textarea id="b2" placeholder="Descreva seu projeto*" required></textarea>
+            <button class="btn-primary" type="submit">Enviar</button>
+            <div style="margin-top:10px;font-size:13px;color:#ffffff">Ou <a href="https://wa.me/5511920007268" target="_blank">WhatsApp</a></div>
+          </form>
+        </aside>
+      </section>
+
+      <section id="Projetos Feitos">
+        <h3 style="color:#000000">Projetos Feitos</h3>
+        <div class="grid">
+          <a class="thumb" href="https://meridianotopografiaa.netlify.app/" target="_blank">
+  Meridiano Topografia
+</a>
+
+          <div class="thumb">Clinica Y — Institucional</div>
+          <div class="thumb">SaaS Z — Painel</div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h3 style="color:#000000;margin-top:18px">Contato direto</h3>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+          <a class="btn-primary" href="mailto:contato@scdev.com.br?subject=Orcamento%20SC%20Dev">Email</a>
+          <a class="btn-ghost" href="https://wa.me/5511920007268" target="_blank">WhatsApp</a>
+          <a class="btn-ghost" href="tel:+5511920007268">Ligar</a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © <span id="y"></span> SC Dev — Samuel Cunha • Desenvolvimento Web
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    function submit2(e){
+      e.preventDefault();
+      const n = document.getElementById('n2').value.trim();
+      const em = document.getElementById('e2').value.trim();
+      const p = document.getElementById('p2').value.trim();
+      const b = document.getElementById('b2').value.trim();
+      if(!n||!em||!b){alert('Preencha os campos obrigatórios.');return false}
+      const subject = encodeURIComponent('Orçamento - SC Dev');
+      const body = encodeURIComponent(`Nome: ${n}\nEmail: ${em}\nTelefone: ${p}\n\nProjeto:\n${b}`);
+      window.location.href = `samuelryancunha80@gmail.com?subject=${subject}&body=${body}`;
+      return false;
+    }
+  </script>
+</body>
+</html>
